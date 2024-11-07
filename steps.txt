@@ -1,0 +1,32 @@
+Setup:
+    -create a frontend and backend folder
+        -npm init -y
+        -npm i express dotenv mongoose jsonwebtoken stripe cloudinary cookie-parser bcryptjs ioredis
+        -npm i nodemon -D
+
+backend folder:
+    -create a file called server.js
+    -change the main.js file in the "package.json" file to backend/server.js
+    -create a property called "start" and add "node backend/server.js"
+        -(nodemon will watch for updates/changes to a file and restart the server. node will not make changes)
+    -add "type": "module" under author. This give you access to the import statement
+
+        Start with the server.js app
+        -follow the notes all the way to app.listen method
+
+routes:
+    -create the app.use method in the "server.js" folder
+    -create a auth.route.js file
+    -work in the auth.route.js file
+    -import the "auth.route.js" file into the "server.js" file
+    -create routes using the router.get() method.
+    -create a file for the routes placed in auth.route.js for readabillity. "auth.controllers.js" in the controllers folders
+
+controllers:
+    -create a file called "auth.controllers.js" take all of the routes in "auths.routes.js" and store them there.
+    -export the routes from the aut.controller.js folder back into the auth.routes.js file using the export function.
+    -in the auth.routes.js folder import the routes and add them into the router.get() methods using the variable names
+    router.get("/signup", signup);
+
+mongoDB:
+    
